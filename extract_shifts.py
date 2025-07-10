@@ -22,6 +22,19 @@ import aiofiles
 import aiohttp
 from PIL import Image
 
+# Excel and PDF processing imports
+try:
+    import xlwings as xw
+except ImportError:
+    logging.warning("xlwings not installed. Install with: uv add xlwings")
+    xw = None
+
+try:
+    import fitz
+except ImportError:
+    logging.warning("PyMuPDF (fitz) not installed. Install with: uv add PyMuPDF")
+    fitz = None
+
 
 # Configuration constants
 class Config:
@@ -40,14 +53,14 @@ class Config:
     SUPPORTED_IMAGE_FORMATS = ['.png', '.jpg', '.jpeg']
     
     # PDF conversion
-    PDF_DPI = 150
+    PDF_DPI = 200
     
     # Batch processing
     BATCH_SIZE = 5
     MAX_CONCURRENT_REQUESTS = 3
     
     # File extensions
-    SUPPORTED_EXTENSIONS = ['.pdf', '.png', '.jpg', '.jpeg']
+    SUPPORTED_EXTENSIONS = ['.pdf', '.png', '.jpg', '.jpeg', '.xlsx', '.xls']
     
     # Logging
     LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
@@ -96,13 +109,6 @@ def setup_logging(log_file: Optional[str] = None) -> logging.Logger:
     )
     
     return logging.getLogger(__name__)
-
-try:
-    from pdf2image import convert_from_path
-except ImportError:
-    logging.warning("pdf2image not installed. Install with: uv add pdf2image")
-    convert_from_path = None
-
 
 async def compress_image(image_path: str, quality: int = Config.IMAGE_QUALITY, max_size: Tuple[int, int] = Config.MAX_IMAGE_SIZE) -> bytes:
     """Compress image to reduce file size while maintaining quality."""
@@ -158,11 +164,11 @@ async def read_file_as_base64(file_path: str) -> str:
 
 
 async def convert_pdf_to_png(pdf_path: str, output_dir: Optional[str] = None, dpi: int = Config.PDF_DPI) -> List[str]:
-    """Convert PDF to PNG files using pdf2image with caching and optimization."""
+    """Convert PDF to PNG files using PyMuPDF with caching and optimization."""
     logger = logging.getLogger(__name__)
     
-    if convert_from_path is None:
-        logger.error("pdf2image package not available. Install with: uv add pdf2image")
+    if fitz is None:
+        logger.error("PyMuPDF (fitz) package not available. Install with: uv add PyMuPDF")
         return []
     
     if output_dir is None:
@@ -182,27 +188,127 @@ async def convert_pdf_to_png(pdf_path: str, output_dir: Optional[str] = None, dp
     try:
         # Convert PDF to images in thread pool to avoid blocking
         loop = asyncio.get_event_loop()
+        
+        def convert_pdf_sync():
+            doc = fitz.open(pdf_path)
+            png_files = []
+            
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                # Calculate zoom factor based on DPI (default 72 DPI)
+                zoom_factor = dpi / 72.0
+                mat = fitz.Matrix(zoom_factor, zoom_factor)
+                
+                # Render page to pixmap
+                pix = page.get_pixmap(matrix=mat)
+                
+                # Save to PNG
+                output_file = output_dir / f"{output_prefix}-{page_num + 1}.png"
+                pix.save(str(output_file))
+                png_files.append(str(output_file))
+                logger.debug(f"Saved page {page_num + 1} to: {output_file}")
+            
+            doc.close()
+            return png_files
+        
         with ThreadPoolExecutor(max_workers=2) as executor:
             logger.debug(f"Starting PDF to image conversion (DPI: {dpi})")
-            images = await loop.run_in_executor(executor, convert_from_path, pdf_path, dpi)
-            logger.info(f"PDF converted to {len(images)} pages")
-            
-            # Save images concurrently
-            async def save_image(image, page_num):
-                output_file = output_dir / f"{output_prefix}-{page_num}.png"
-                logger.debug(f"Saving page {page_num} to: {output_file}")
-                await loop.run_in_executor(executor, image.save, output_file, 'PNG')
-                return output_file
-            
-            # Process all pages concurrently
-            save_tasks = [save_image(image, i) for i, image in enumerate(images, 1)]
-            png_files = await asyncio.gather(*save_tasks)
+            png_files = await loop.run_in_executor(executor, convert_pdf_sync)
+            logger.info(f"PDF converted to {len(png_files)} pages")
         
         logger.info(f"Successfully converted {pdf_path} to {len(png_files)} PNG files")
         return sorted(png_files)
         
     except Exception as e:
         logger.error(f"Error converting PDF to PNG: {e}", exc_info=True)
+        return []
+
+async def convert_excel_to_pdf(excel_path: str, output_dir: Optional[str] = None) -> List[str]:
+    """Convert Excel files to PDF using xlwings with optimization."""
+    logger = logging.getLogger(__name__)
+    
+    if xw is None:
+        logger.error("xlwings package not available. Install with: uv add xlwings")
+        return []
+    
+    if fitz is None:
+        logger.error("PyMuPDF (fitz) package not available. Install with: uv add PyMuPDF")
+        return []
+    
+    if output_dir is None:
+        output_dir = Path(excel_path).parent / "preprocessing"
+    
+    output_dir = Path(output_dir)
+    output_dir.mkdir(exist_ok=True)
+    
+    logger.info(f"Converting Excel to PDF: {excel_path}")
+    logger.debug(f"Output directory: {output_dir}")
+    
+    extracted_pdfs_paths = []
+    
+    try:
+        # Convert Excel to PDF in thread pool to avoid blocking
+        loop = asyncio.get_event_loop()
+        
+        def convert_workbook_sync():
+            with xw.App(visible=False) as app:
+                wb = app.books.open(excel_path)
+                # Save the workbook to ensure it's in a proper state for PDF export
+                wb.save()
+                
+                # Convert each sheet to a PDF
+                for sheet_name in wb.sheet_names:
+                    temp_pdf_name = f"{Path(excel_path).stem}-{sheet_name}.pdf"
+                    temp_pdf_path = output_dir / temp_pdf_name
+                    
+                    ws = wb.sheets(sheet_name)
+                    ws_ps = ws.api.PageSetup
+                    is_valid = False
+                    zoom = 100
+                    
+                    while not is_valid and zoom >= 10:
+                        # Minimum zoom is 10
+                        ws_ps.Zoom = zoom
+                        ws_ps.FitToPagesWide = 1
+                        ws_ps.FitToPagesTall = 1
+                        
+                        try:
+                            ws.to_pdf(str(temp_pdf_path))
+                            doc = fitz.open(str(temp_pdf_path))
+                            num_pages = len(doc)
+                            doc.close()
+                            
+                            if num_pages == 1:
+                                # Exported PDF contains a single page that shows the whole excel sheet
+                                is_valid = True
+                                extracted_pdfs_paths.append(str(temp_pdf_path))
+                                logger.debug(f"Successfully converted sheet {sheet_name} to PDF")
+                            else:
+                                # Zoom out a little more to fit the page
+                                zoom -= 5
+                                if temp_pdf_path.exists():
+                                    temp_pdf_path.unlink()
+                        except Exception as e:
+                            logger.debug(f"Error exporting sheet {sheet_name} to PDF: {e}")
+                            zoom -= 5
+                            if temp_pdf_path.exists():
+                                temp_pdf_path.unlink()
+                    
+                    if zoom == 10 and not is_valid:
+                        logger.warning(f"Unable to extract sheet {sheet_name} from {excel_path}")
+                    else:
+                        logger.info(f"Extracted sheet {sheet_name} from {excel_path}")
+                
+                wb.close()
+        
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            await loop.run_in_executor(executor, convert_workbook_sync)
+        
+        logger.info(f"Successfully converted {excel_path} to {len(extracted_pdfs_paths)} PDF files")
+        return extracted_pdfs_paths
+        
+    except Exception as e:
+        logger.error(f"Error converting Excel to PDF: {e}", exc_info=True)
         return []
 
 def get_mime_type(file_path):
@@ -397,7 +503,7 @@ async def process_multiple_files(png_files, api_key):
     return await batch_process_small_images(png_files, api_key)
 
 async def process_single_schedule_file(file_path, api_key):
-    """Process a single schedule file (PDF or image). Used by main.py."""
+    """Process a single schedule file (PDF, Excel, or image). Used by main.py."""
     logger = logging.getLogger(__name__)
     
     try:
@@ -423,6 +529,37 @@ async def process_single_schedule_file(file_path, api_key):
             logger.info(f"Successfully processed {len(successful_results)}/{len(png_files)} files")
             return len(successful_results) > 0
         
+        # Handle Excel files: convert to PDF first, then to PNG
+        elif file_ext in ['.xlsx', '.xls']:
+            logger.info("Excel file detected, converting to PDF first")
+            pdf_files = await convert_excel_to_pdf(file_path)
+            
+            if not pdf_files:
+                logger.error("Failed to convert Excel to PDF files")
+                return False
+            
+            logger.info(f"Successfully converted to {len(pdf_files)} PDF files")
+            
+            # Convert each PDF to PNG and process
+            all_png_files = []
+            for pdf_file in pdf_files:
+                png_files = await convert_pdf_to_png(pdf_file)
+                all_png_files.extend(png_files)
+            
+            if not all_png_files:
+                logger.error("Failed to convert PDF files to PNG files")
+                return False
+            
+            logger.info(f"Successfully converted to {len(all_png_files)} PNG files")
+            
+            # Process all PNG files
+            logger.info(f"Processing {len(all_png_files)} PNG files")
+            results = await process_multiple_files(all_png_files, api_key)
+            
+            successful_results = [r for r in results if r[1] is not None]
+            logger.info(f"Successfully processed {len(successful_results)}/{len(all_png_files)} files")
+            return len(successful_results) > 0
+        
         # Regular processing for image files
         else:
             logger.info("Processing image file directly")
@@ -444,8 +581,8 @@ async def main():
     if len(sys.argv) != 2:
         logger.error("Incorrect usage")
         print("Usage: python extract_shifts.py <file_path>")
-        print("Supported formats: PDF, PNG, JPG, JPEG")
-        print("Note: PDF files are automatically converted to PNG files first")
+        print("Supported formats: PDF, PNG, JPG, JPEG, XLSX, XLS")
+        print("Note: PDF and Excel files are automatically converted to PNG files first")
         sys.exit(1)
     
     file_path = sys.argv[1]
@@ -456,7 +593,7 @@ async def main():
         sys.exit(1)
     
     # Get API key from environment
-    api_key = os.getenv('OPENROUTER_API_KEY')
+    api_key = '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'
     if not api_key:
         logger.error("OPENROUTER_API_KEY environment variable not set")
         sys.exit(1)
@@ -485,6 +622,38 @@ async def main():
             successful_results = [r for r in results if r[1] is not None]
             logger.info(f"Completed processing all {len(png_files)} PNG files from PDF conversion")
             logger.info(f"Successfully processed {len(successful_results)}/{len(png_files)} files")
+            return
+        
+        # Handle Excel files: convert to PDF first, then to PNG
+        elif file_ext in ['.xlsx', '.xls']:
+            logger.info("Excel file detected, converting to PDF first")
+            pdf_files = await convert_excel_to_pdf(file_path)
+            
+            if not pdf_files:
+                logger.error("Failed to convert Excel to PDF files")
+                sys.exit(1)
+            
+            logger.info(f"Successfully converted to {len(pdf_files)} PDF files")
+            
+            # Convert each PDF to PNG and process
+            all_png_files = []
+            for pdf_file in pdf_files:
+                png_files = await convert_pdf_to_png(pdf_file)
+                all_png_files.extend(png_files)
+            
+            if not all_png_files:
+                logger.error("Failed to convert PDF files to PNG files")
+                sys.exit(1)
+            
+            logger.info(f"Successfully converted to {len(all_png_files)} PNG files")
+            
+            # Process all PNG files concurrently
+            logger.info(f"Processing {len(all_png_files)} PNG files concurrently")
+            results = await process_multiple_files(all_png_files, api_key)
+            
+            successful_results = [r for r in results if r[1] is not None]
+            logger.info(f"Completed processing all {len(all_png_files)} PNG files from Excel conversion")
+            logger.info(f"Successfully processed {len(successful_results)}/{len(all_png_files)} files")
             return
         
         # Regular processing for image files
