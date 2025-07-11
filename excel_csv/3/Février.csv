@@ -1,0 +1,42 @@
+Unnamed: 0,LES MÉDECINS DE LA CLINIQUE D'URGENCE EJ ,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
+,FÉVRIER 2024,,,,,,,,,,,
+,,,,,,,,,,,,
+,Date,,U Nuit,U Nuit 2,U jour 1,U jour 2,U jour 3,U jour 4,U soir 1,U soir 2,U soir 3,U soir 4
+,,,,,,,,,,,,
+4,2024-02-01,,É.Brassard,F.Fortier-Dumais,S.Beaulieu,J.Marcotte,M.Boucher,J.Blais-Lécuyer,V.Gauvin,PG.Blanchard,M.Emond,D.Eramian
+,2024-02-02,,E.Béland,É.Brassard,M.Boucher,JF.Prévost,G.Côté,J.Marcotte,M.Leblanc,J.Blais-Lécuyer,H.Dufour-Neyron,F.Gill
+,2024-02-03,,H.Baccanale,E.Béland,N.Bernard,D.Eramian,M.Belhumeur,JF.Prévost,F.Gill,H.Dufour-Neyron,P.Renaud,M.Leblanc
+,2024-02-04,,E.Béland,H.Baccanale,N.Bernard,M.Belhumeur,D.Eramian,JF.Prévost,F.Gill,P.Renaud,H.Dufour-Neyron,M.Leblanc
+,,,,,,,,,,,,
+5,2024-02-05,,H.Baccanale,E.Béland,H.Scott,JF.Prévost,A.Lachance-Fortin,D.Eramian,J.Blais-Lécuyer,F.Gill,M.Belhumeur,É.Brassard
+,2024-02-06,,MÈ.Gilbert,H.Baccanale,C.Malo,J.Villeneuve,M.Leblanc,P.Renaud,E.Béland,A.Lachance-Fortin,N.Bernard,J.Blais-Lécuyer
+,2024-02-07,,H.Dufour-Neyron,MÈ.Gilbert,M.Belhumeur,JF.Prévost,F.Gill,V.Dion,P.Renaud,A.Lachance-Fortin,D.Eramian,M.Leblanc
+,2024-02-08,,PL.Nadeau,H.Dufour-Neyron,E.Béland,H.Baccanale,É.Mercier,M.Belhumeur,A.Lachance-Fortin,D.Eramian,M.Leblanc,JF.Prévost
+,2024-02-09,,H.Dufour-Neyron,PL.Nadeau,É.Mercier,MÈ.Gilbert,F.Gill,P.Renaud,N.Bernard,H.Scott,J.Villeneuve,C.Malo
+,2024-02-10,,PL.Nadeau,PG.Blanchard,V.Dion,JF.Shields,É.Brassard,J.Blais-Lécuyer,C.Malo,J.Villeneuve,H.Scott,N.Bernard
+,2024-02-11,,PG.Blanchard,PL.Nadeau,V.Dion,É.Brassard,JF.Shields,J.Blais-Lécuyer,C.Malo,H.Scott,J.Villeneuve,N.Bernard
+,,,,,,,,,,,,
+6,2024-02-12,,JF.Prévost,PG.Blanchard,E.Béland,J.Blais-Lécuyer,H.Baccanale,D.Eramian,JF.Shields,N.Bernard,É.Brassard,A.Lachance-Fortin
+,2024-02-13,,PG.Blanchard,M.Emond,V.Dion,D.Eramian,PL.Nadeau,M.Boucher,A.Lachance-Fortin,JF.Shields,É.Mercier,J.Blais-Lécuyer
+,2024-02-14,,M.Emond,PG.Blanchard,M.Boucher,É.Brassard,JF.Prévost,D.Eramian,N.Bernard,H.Baccanale,A.Lachance-Fortin,J.Villeneuve
+,2024-02-15,,PG.Blanchard,É.Mercier,P.Renaud,C.Malo,D.Eramian,J.Blais-Lécuyer,M.Leblanc,N.Bernard,JF.Prévost,H.Baccanale
+,2024-02-16,,É.Mercier,V.Dion,MÈ.Gilbert,C.Malo,P.Renaud,E.Béland,H.Dufour-Neyron,M.Belhumeur,F.Gill,H.Scott
+,2024-02-17,,V.Dion,É.Mercier,PL.Nadeau,J.Villeneuve,MÈ.Gilbert,M.Leblanc,H.Scott,F.Gill,M.Belhumeur,H.Dufour-Neyron
+,2024-02-18,,É.Mercier,V.Dion,PL.Nadeau,MÈ.Gilbert,J.Villeneuve,M.Leblanc,H.Scott,M.Belhumeur,F.Gill,H.Dufour-Neyron
+,,,,,,,,,,,,
+7,2024-02-19,,V.Dion,É.Mercier,MÈ.Gilbert,S.Beaulieu,A.Benhamed,PL.Nadeau,J.Blais-Lécuyer,V.Gauvin,H.Dufour-Neyron,J.Villeneuve
+,2024-02-20,,É.Mercier,V.Dion,S.Beaulieu,M.Belhumeur,F.Gill,H.Scott,A.Benhamed,H.Dufour-Neyron,J.Villeneuve,G.Côté
+,2024-02-21,,V.Dion,MÈ.Gilbert,PL.Nadeau,F.Gill,J.Marcotte,M.Leblanc,H.Dufour-Neyron,S.Beaulieu,M.Belhumeur,F.Fortier-Dumais
+,2024-02-22,,MÈ.Gilbert,G.Côté,M.Leblanc,J.Villeneuve,H.Scott,PL.Nadeau,M.Belhumeur,F.Gill,S.Beaulieu,V.Dion
+,2024-02-23,,A.Lachance-Fortin,F.Fortier-Dumais,J.Villeneuve,MÈ.Gilbert,PL.Nadeau,H.Scott,M.Boucher,J.Marcotte,É.Mercier,M.Leblanc
+,2024-02-24,,F.Fortier-Dumais,A.Lachance-Fortin,J.Blais-Lécuyer,V.Gauvin,M.Emond,C.Malo,M.Leblanc,G.Côté,J.Marcotte,M.Boucher
+,2024-02-25,,A.Lachance-Fortin,F.Fortier-Dumais,J.Blais-Lécuyer,M.Emond,V.Gauvin,C.Malo,M.Leblanc,J.Marcotte,G.Côté,M.Boucher
+,,,,,,,,,,,,
+8,2024-02-26,,F.Fortier-Dumais,A.Lachance-Fortin,J.Villeneuve,A.Benhamed,V.Dion,F.Gill,MÈ.Gilbert,S.Beaulieu,J.Marcotte,PL.Nadeau
+,2024-02-27,,JF.Shields,C.Malo,M.Boucher,V.Dion,V.Gauvin,M.Leblanc,J.Blais-Lécuyer,J.Villeneuve,PL.Nadeau,G.Côté
+,2024-02-28,,C.Malo,JF.Shields,M.Leblanc,J.Marcotte,M.Boucher,M.Belhumeur,F.Fortier-Dumais,MÈ.Gilbert,H.Dufour-Neyron,V.Dion
+,2024-02-29,,JF.Shields,C.Malo,PL.Nadeau,A.Lachance-Fortin,G.Côté,M.Leblanc,F.Fortier-Dumais,A.Benhamed,MÈ.Gilbert,J.Marcotte
+,,,,,,,,,,,,
+VACANCES : 22 janvier au 4 février : Drs Dion / Gilbert / Malo / Mercier / Nadeau / Scott / Shields / Villeneuve,,,,,,,,,,,,
+5 au 18 février : Drs Beaulieu / Benhamed / Boucher / Côté / Emond / Fortier-Dumais / Gauvin / Marcotte,,,,,,,,,,,,
+19 février au 3 mars : Drs Baccanale / Béland / Bernard / Blanchard / Brassard / Eramian / Prévost / Renaud,,,,,,,,,,,,

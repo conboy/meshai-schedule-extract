@@ -1,0 +1,36 @@
+Unnamed: 0,LES MÉDECINS DE LA CLINIQUE D'URGENCE EJ ,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
+,JANVIER 2024,,,,,,,,,,,
+,,,,,,,,,,,,
+,Date,,U Nuit,U Nuit 2,U jour 1,U jour 2,U jour 3,U jour 4,U soir 1,U soir 2,U soir 3,U soir 4
+,,,,,,,,,,,,
+1,2024-01-08,,C.Malo,H.Baccanale,P.Renaud,J.Villeneuve,JF.Prévost,N.Bernard,PL.Nadeau,D.Eramian,M.Boucher,É.Mercier
+,2024-01-09,,E.Béland,C.Malo,J.Marcotte,H.Scott,G.Côté,P.Renaud,V.Gauvin,JF.Prévost,H.Baccanale,F.Fortier-Dumais
+,2024-01-10,,V.Dion,E.Béland,D.Eramian,S.Beaulieu,H.Scott,J.Marcotte,G.Côté,N.Bernard,M.Boucher,V.Gauvin
+,2024-01-11,,E.Béland,V.Dion,PL.Nadeau,PG.Blanchard,S.Beaulieu,É.Mercier,J.Marcotte,H.Baccanale,N.Bernard,H.Scott
+,2024-01-12,,V.Dion,D.Eramian,JF.Prévost,G.Côté,V.Gauvin,S.Beaulieu,P.Renaud,F.Fortier-Dumais,MÈ.Gilbert,J.Villeneuve
+,2024-01-13,,PG.Blanchard,V.Dion,É.Mercier,M.Boucher,C.Malo,PL.Nadeau,J.Villeneuve,MÈ.Gilbert,F.Fortier-Dumais,E.Béland
+,2024-01-14,,V.Dion,PG.Blanchard,É.Mercier,C.Malo,M.Boucher,PL.Nadeau,J.Villeneuve,F.Fortier-Dumais,MÈ.Gilbert,E.Béland
+,,,,,,,,,,,,
+2,2024-01-15,,PG.Blanchard,V.Dion,H.Scott,N.Bernard,É.Mercier,M.Boucher,PL.Nadeau,E.Béland,JF.Shields,MÈ.Gilbert
+,2024-01-16,,JF.Prévost,PG.Blanchard,J.Villeneuve,F.Fortier-Dumais,H.Scott,S.Beaulieu,É.Mercier,C.Malo,P.Renaud,PL.Nadeau
+,2024-01-17,,PG.Blanchard,V.Gauvin,V.Dion,J.Villeneuve,MÈ.Gilbert,E.Béland,H.Scott,É.Mercier,C.Malo,F.Fortier-Dumais
+,2024-01-18,,V.Gauvin,M.Emond,M.Boucher,PL.Nadeau,J.Villeneuve,JF.Shields,C.Malo,JF.Prévost,PG.Blanchard,H.Scott
+,2024-01-19,,M.Emond,V.Gauvin,MÈ.Gilbert,M.Boucher,E.Béland,J.Villeneuve,H.Baccanale,JF.Shields,N.Bernard,D.Eramian
+,2024-01-20,,V.Gauvin,M.Emond,F.Fortier-Dumais,G.Côté,P.Renaud,S.Beaulieu,D.Eramian,N.Bernard,J.Marcotte,H.Baccanale
+,2024-01-21,,M.Emond,V.Gauvin,F.Fortier-Dumais,P.Renaud,G.Côté,S.Beaulieu,D.Eramian,J.Marcotte,N.Bernard,H.Baccanale
+,,,,,,,,,,,,
+3,2024-01-22,,V.Gauvin,M.Emond,P.Renaud,M.Leblanc,M.Belhumeur,G.Côté,S.Beaulieu,J.Marcotte,D.Eramian,F.Gill
+,2024-01-23,,M.Emond,J.Blais-Lécuyer,N.Bernard,E.Béland,F.Fortier-Dumais,H.Baccanale,G.Côté,M.Leblanc,S.Beaulieu,P.Renaud
+,2024-01-24,,J.Blais-Lécuyer,M.Emond,F.Fortier-Dumais,J.Marcotte,D.Eramian,N.Bernard,M.Belhumeur,F.Gill,M.Boucher,V.Gauvin
+,2024-01-25,,H.Dufour-Neyron,J.Blais-Lécuyer,D.Eramian,S.Beaulieu,N.Bernard,PG.Blanchard,J.Marcotte,H.Baccanale,M.Belhumeur,E.Béland
+,2024-01-26,,A.Benhamed,H.Dufour-Neyron,F.Gill,D.Eramian,N.Bernard,S.Beaulieu,H.Baccanale,JF.Prévost,F.Fortier-Dumais,M.Boucher
+,2024-01-27,,H.Dufour-Neyron,A.Benhamed,E.Béland,M.Leblanc,V.Gauvin,PG.Blanchard,M.Boucher,G.Côté,JF.Prévost,J.Blais-Lécuyer
+,2024-01-28,,A.Benhamed,H.Dufour-Neyron,E.Béland,V.Gauvin,M.Leblanc,PG.Blanchard,M.Boucher,JF.Prévost,G.Côté,J.Blais-Lécuyer
+,,,,,,,,,,,,
+4,2024-01-29,,F.Fortier-Dumais,A.Benhamed,J.Marcotte,P.Renaud,M.Belhumeur,V.Gauvin,S.Beaulieu,N.Bernard,PG.Blanchard,G.Côté
+,2024-01-30,,É.Brassard,F.Fortier-Dumais,J.Marcotte,H.Baccanale,J.Blais-Lécuyer,H.Dufour-Neyron,D.Eramian,M.Emond,S.Beaulieu,PG.Blanchard
+,2024-01-31,,F.Fortier-Dumais,É.Brassard,G.Côté,M.Boucher,J.Blais-Lécuyer,N.Bernard,PG.Blanchard,M.Belhumeur,V.Gauvin,M.Leblanc
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+VACANCES : 8 au 21 janvier : Drs Belhumeur /  Blais-L'Écuyer / Dufour-Neyron /  Gill / Leblanc,,,,,,,,,,,,
+22 janvier au 4 février : Drs Dion / Gilbert / Malo / Mercier / Nadeau / Scott / Shields / Villeneuve,,,,,,,,,,,,

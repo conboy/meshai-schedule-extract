@@ -1,0 +1,43 @@
+Unnamed: 0,LES MÉDECINS DE LA CLINIQUE D'URGENCE EJ ,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
+,JUIN 2024,,,,,,,,,,,
+,,,,,,,,,,,,
+,Date,,U Nuit,U Nuit 2,U jour 1,U jour 2,U jour 3,U jour 4,U soir 1,U soir 2,U soir 3,U soir 4
+,,,,,,,,,,,,
+21,2024-06-01,,JF.Prévost,H.Dufour-Neyron,A.Lachance-Fortin,É.Mercier,M.Boucher,J.Villeneuve,MÈ.Gilbert,F.Fortier-Dumais,PG.Blanchard,C.Malo
+,2024-06-02,,H.Dufour-Neyron,JF.Prévost,A.Lachance-Fortin,M.Boucher,É.Mercier,J.Villeneuve,MÈ.Gilbert,PG.Blanchard,F.Fortier-Dumais,C.Malo
+,,,,,,,,,,,,
+22,2024-06-03,,V.Gauvin,H.Dufour-Neyron,D.Eramian,J.Marcotte,F.Gill,MÈ.Gilbert,M.Boucher,M.Leblanc,PG.Blanchard,C.Malo
+,2024-06-04,,H.Dufour-Neyron,V.Gauvin,F.Gill,D.Eramian,A.Lachance-Fortin,F.Fortier-Dumais,J.Blais-Lécuyer,P.Renaud,PG.Blanchard,M.Boucher
+,2024-06-05,,V.Gauvin,É.Mercier,C.Malo,JF.Prévost,J.Marcotte,D.Eramian,F.Fortier-Dumais,MÈ.Gilbert,A.Lachance-Fortin,PG.Blanchard
+,2024-06-06,,É.Mercier,V.Gauvin,J.Marcotte,H.Baccanale,JF.Prévost,J.Villeneuve,C.Malo,F.Fortier-Dumais,D.Eramian,F.Gill
+,2024-06-07,,V.Gauvin,É.Mercier,JF.Prévost,M.Boucher,PG.Blanchard,MÈ.Gilbert,J.Villeneuve,M.Belhumeur,A.Lachance-Fortin,JF.Shields
+,2024-06-08,,H.Baccanale,J.Blais-Lécuyer,H.Dufour-Neyron,M.Leblanc,P.Renaud,E.Béland,É.Brassard,JF.Shields,M.Belhumeur,J.Villeneuve
+,2024-06-09,,J.Blais-Lécuyer,H.Baccanale,H.Dufour-Neyron,P.Renaud,M.Leblanc,E.Béland,É.Brassard,M.Belhumeur,JF.Shields,J.Villeneuve
+,,,,,,,,,,,,
+23,2024-06-10,,M.Emond,J.Blais-Lécuyer,M.Leblanc,N.Bernard,H.Dufour-Neyron,S.Beaulieu,V.Dion,E.Béland,JF.Prévost,P.Renaud
+,2024-06-11,,É.Brassard,M.Emond,H.Scott,H.Dufour-Neyron,PL.Nadeau,N.Bernard,JF.Prévost,V.Dion,E.Béland,S.Beaulieu
+,2024-06-12,,G.Côté,É.Brassard,J.Villeneuve,JF.Shields,M.Leblanc,PL.Nadeau,H.Scott,N.Bernard,S.Beaulieu,J.Blais-Lécuyer
+,2024-06-13,,É.Brassard,G.Côté,JF.Shields,J.Villeneuve,JF.Prévost,H.Dufour-Neyron,PL.Nadeau,M.Leblanc,N.Bernard,H.Scott
+,2024-06-14,,A.Benhamed,É.Brassard,E.Béland,V.Dion,J.Villeneuve,C.Malo,M.Boucher,H.Dufour-Neyron,H.Baccanale,M.Belhumeur
+,2024-06-15,,PG.Blanchard,A.Benhamed,M.Leblanc,J.Blais-Lécuyer,C.Malo,P.Renaud,M.Belhumeur,H.Baccanale,G.Côté,M.Boucher
+,2024-06-16,,A.Benhamed,PG.Blanchard,M.Leblanc,C.Malo,J.Blais-Lécuyer,P.Renaud,M.Belhumeur,G.Côté,H.Baccanale,M.Boucher
+,,,,,,,,,,,,
+24,2024-06-17,,PG.Blanchard,V.Dion,N.Bernard,H.Dufour-Neyron,P.Renaud,M.Leblanc,J.Villeneuve,M.Boucher,JF.Prévost,C.Malo
+,2024-06-18,,H.Baccanale,PG.Blanchard,E.Béland,JF.Shields,G.Côté,J.Blais-Lécuyer,JF.Prévost,J.Villeneuve,P.Renaud,M.Leblanc
+,2024-06-19,,C.Malo,H.Baccanale,J.Blais-Lécuyer,E.Béland,JF.Shields,PG.Blanchard,P.Renaud,M.Belhumeur,J.Villeneuve,N.Bernard
+,2024-06-20,,H.Baccanale,C.Malo,M.Boucher,J.Blais-Lécuyer,E.Béland,JF.Prévost,M.Leblanc,JF.Shields,J.Villeneuve,PL.Nadeau
+,2024-06-21,,H.Dufour-Neyron,H.Baccanale,J.Blais-Lécuyer,H.Scott,C.Malo,JF.Prévost,S.Beaulieu,PL.Nadeau,A.Benhamed,PG.Blanchard
+,2024-06-22,,M.Emond,H.Dufour-Neyron,H.Scott,M.Boucher,N.Bernard,G.Côté,V.Dion,A.Benhamed,PL.Nadeau,S.Beaulieu
+,2024-06-23,,H.Dufour-Neyron,M.Emond,H.Scott,N.Bernard,M.Boucher,G.Côté,V.Dion,PL.Nadeau,A.Benhamed,S.Beaulieu
+,,,,,,,,,,,,
+25,2024-06-24,,M.Emond,H.Dufour-Neyron,F.Fortier-Dumais,G.Côté,H.Scott,D.Eramian,A.Benhamed,S.Beaulieu,M.Boucher,V.Dion
+,2024-06-25,,A.Lachance-Fortin,M.Emond,É.Mercier,V.Gauvin,PL.Nadeau,F.Gill,MÈ.Gilbert,H.Scott,N.Bernard,A.Benhamed
+,2024-06-26,,M.Emond,A.Lachance-Fortin,M.Belhumeur,F.Fortier-Dumais,M.Boucher,H.Dufour-Neyron,V.Dion,J.Marcotte,H.Scott,G.Côté
+,2024-06-27,,A.Lachance-Fortin,M.Emond,N.Bernard,F.Fortier-Dumais,S.Beaulieu,A.Benhamed,H.Dufour-Neyron,M.Boucher,G.Côté,PL.Nadeau
+,2024-06-28,,M.Emond,A.Lachance-Fortin,S.Beaulieu,V.Dion,MÈ.Gilbert,N.Bernard,M.Belhumeur,É.Brassard,D.Eramian,V.Gauvin
+,2024-06-29,,PL.Nadeau,É.Mercier,F.Gill,J.Marcotte,PG.Blanchard,MÈ.Gilbert,V.Gauvin,D.Eramian,É.Brassard,M.Belhumeur
+,2024-06-30,,É.Mercier,PL.Nadeau,F.Gill,PG.Blanchard,J.Marcotte,MÈ.Gilbert,V.Gauvin,É.Brassard,D.Eramian,M.Belhumeur
+,,,,,,,,,,,,
+VACANCES : 27 mai au 9 juin : Drs Beaulieu / Benhamed / Bernard / Côté / Dion / Emond / Nadeau / Scott,,,,,,,,,,,,
+10 au 23 juin : Drs Eramian / Fortier-Dumais / Gauvin / Gilbert / Gill / Lachance-Fortin / Marcotte / Mercier,,,,,,,,,,,,
+24 juin au 7 juillet : Drs Baccanale / Béland / Blais-L'Écuyer / Leblanc / Malo / Prévost / Renaud / Villeneuve,,,,,,,,,,,,

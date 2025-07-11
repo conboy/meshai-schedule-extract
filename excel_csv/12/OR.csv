@@ -1,0 +1,136 @@
+Unnamed: 0,Unnamed: 1,Orthopaedic OR Schedule  KGH / HDH,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,Jan Feb 2019
+,,,,,,Version 2018.11.22
+,,,,,,
+Wk 7,Week of:,,Jan 7,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Campbell,,7,8,9,10,11
+,,,,,,
+KGH,1,,,,,
+  Trauma  7.5,,CAM,YAC,CAM,DAC,CAM
+  Elective 7.5,,YEN,BOR,DAC,HAR,YEN
+  Elective  7.5,,RUD,RUD,,YAC,WOO
+,,,,,,HAR
+HDH,,,,,,
+  Elective ,,TJR - MAN,KW,BIC,BOR,BIC
+,,,,,BAR,BAR
+,,,,,,
+Away:,,Har,,Pic,"Pic, Man",Pic
+,,,,,Bic,
+,,,,,,
+Wk 8,Week of:,,Jan 14,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+DaCunha,,14,15,16,17,18
+,,,,,,
+KGH,2,,,,,
+  Trauma  7.5,,DAC,YAC,DAC,YAC,DAC
+  Elective 7.5,,RUD,BOR,BOR,WOO,HAR
+  Elective  7.5,,BAR,RUD,,HAR,MAN
+,,,,,,
+HDH,,,,,,
+  Elective ,,TJR - HAR,CAM,YEN,PIC,BAR
+,,,,,,BIC
+,,,,,,
+Away:,,,,Man,Bic,Yen
+,,,,,,
+,,,,,,
+Wk 1,Week of:,,Jan 21,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Bicknell,,21,22,23,24,25
+,,,,,,
+KGH,3,,CaRMS,,,
+  Trauma  7.5,,BIC,DAC,BIC,MAN,BIC
+  Elective 7.5,,MAN,BOR,HAR,BOR,YAC
+  Elective  7.5,,RUD,WOO,,YEN,MAN
+  Elective 7.5,,,,,,WOO
+,,,,,,
+HDH,,,,,,
+  Elective ,,TJR - WOO,KW,DAC,BAR,KW
+,,,,,CAM,DAC
+,,,,,,
+Away:,,Har,,,,"Yen, Rud"
+,,,,,,Bar
+,,,,,,
+Wk 2,Week of:,,Jan 28,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Yach,,28,29,30,31,1
+,,,,,,
+KGH,4,,,,,
+  Trauma  7.5,,YAC,YAC,BAR,MAN,YAC
+  Elective 7.5,,YEN,BOR,MAN,PIC,WOO
+  Elective  7.5,,BOR,MAN,,HAR,YEN
+  Elective 7.5,,,,,,CAM
+,,,,,,
+HDH,,,,,,
+  Elective ,,TJR - HAR,BAR,WOO,KW,BAR
+,,,,BIC,,PIC
+,,,,,,
+Away:,,Rud,Rud,"Rud, Dac","Rud, Dac","Rud, Dac"
+,,,,,Bic,Bic
+,,,,,,
+Wk 3,Week of:,,Feb 4,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Wood,,4,5,6,7,8
+,,,,,,
+KGH,1,,,,,
+  Trauma  7.5,,WOO,YAC,WOO,BIC,YAC
+  Elective 7.5,,YAC,BOR,BOR,HAR,BIC
+  Elective  7.5,,YEN,HAR,,BOR,HAR
+,,,,,,CAM
+HDH,,,,,,
+  Elective ,,TJR - CAM,YEN,BIC,BAR,BAR
+,,,,,DAC,DAC
+,,,,,,
+Away:,,"Har, KW","KW, Rud","KW, Rud","KW, Rud","KW, Rud"
+,,"Rud, Man",Man,Man,Man,Man
+,,,,,,
+Wk 4,Week of:,,Feb 11,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Bardana,,11,12,13,14,15
+,,,,,,
+KGH,2,,,,,
+  Trauma  7.5,,BAR,YAC,BAR,MAN,BAR
+  Elective 7.5,,YAC,BOR,RUD,HAR,CAM
+  Elective  7.5,,CAM,HAR,,RUD,YEN
+,,,,,,
+HDH,,,,,,
+  Elective ,,TJR-WOO,PIC,WOO,DAC,KW
+,,,,,,BIC
+,,,,, ,
+Away:,,"Har, Rud",,,Bic,Yac
+,,Man,,,,
+,,,,,,
+Wk 5,Week of:,,Feb 18,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Mann,,18,19,20,21,22
+,,,,,,
+KGH,3,,,,,
+,,,,,,
+  Trauma  7.5,,Family Day,YAC,MAN,BAR,MAN
+  Elective 7.5,,,RUD,BIC,CAM,CAM
+  Elective  7.5,,,WOO,,YAC,YEN
+  Elective 7.5,,,,,,WOO
+,,,,,,
+HDH,,,,,,
+  Elective ,,,TJR - CAM,BAR,PIC,KW
+,,,,,KW,DAC
+,,,,,,
+Away:,,,Har,"Har, Bor","Har, Bor",Bor
+,,,,,,
+,,,,,,
+Wk 6,Week of:,,Feb 25,,,
+On Call:,,Monday,Tuesday,Wednesday,Thursday,Friday
+Harrison,,25,26,27,28,1
+,,,,,,
+KGH,4,,,,,
+  Trauma  7.5,,HAR,YAC,HAR,YAC,YAC
+  Elective 7.5,,MAN,RUD,RUD,MAN,BIC
+  Elective  7.5,,RUD,WOO,,DAC,MAN
+  Elective 7.5,,,,,,CAM
+,,,,,,
+HDH,,,,,,
+  Elective ,,TJR - WOO,BAR,BIC,CAM,YEN
+,,,,YEN,,KW
+,,,,,,
+Away:,,Bor,Bor,Bor,"Bor, Bic","Bor, Dac"
+,,,,,,Bar
