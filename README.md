@@ -1,21 +1,9 @@
-# Schedule Extract Tool
+# Unstructured Schedule Extraction Agents
 
-Script to extract shift information from PDF or PNG files using OpenRouter API.
+Agents built for meshai.io to extract employee shift information from unstructured schedule files.
 
 ## Setup
 
-### Option 1: Automatic Setup (Recommended)
-Run the setup script:
-```bash
-./setup.sh
-```
-
-This will:
-- Install uv (if not already installed)
-- Create a virtual environment
-- Install all dependencies
-
-### Option 2: Manual Setup
 1. Install uv if not already installed:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -56,40 +44,46 @@ python main.py
 ```
 
 ## Supported Formats
-- PDF files (converted to PNG)
-- PNG images
-- JPG/JPEG images
+- PDF
+- PNG
+- Excel
+- Word Documents
 
-## Output
+## TODO: Refactor Structure
 
-The script will:
-1. Send the file to OpenRouter for analysis
-2. Extract all shifts with fields: Start Date, Start Time, End Date, End Time, Job, Member, Worked Hours, Note
-3. Save results as JSON (or text if JSON parsing fails)
-4. Display the extracted shifts
+The repo needs a major refactor to improve organization and maintainability:
 
-## Package Management
+### Proposed Structure:
+```
+main.py
+config.py
+logging.py
 
-This project uses [uv](https://docs.astral.sh/uv/) for fast Python package management.
+file_conversion/
+├── doc_to_pdf.py
+├── doc_to_csv.py (convert tables inside doc to csv)
+├── excel_to_png.py (using libreoffice)
+├── excel_to_csv.py
+└── pdf_to_png.py
 
-### Adding new dependencies:
-```bash
-uv add <package-name>
+agents/
+├── decision_agent.py
+├── png_agent.py
+├── csv_agent.py
+├── post_processing_agent.py (role TBD)
+└── png_csv_agent.py (benchmark against separate agents)
+
+testing/
+├── validated_json/
+└── compare_script.py
 ```
 
-### Removing dependencies:
-```bash
-uv remove <package-name>
-```
-
-### Updating dependencies:
-```bash
-uv pip install --upgrade -r requirements.txt
-```
-
-## Available Files
-
-The `data/` directory contains various schedule files you can test with:
-- PDF schedules
-- PNG images
-- Excel files (not supported by this script)
+### Refactor Tasks:
+- [ ] Restructure files according to proposed organization
+- [ ] Create modular file conversion utilities
+- [ ] Implement specialized agents for different data types
+- [ ] Set up proper testing framework with validation
+- [ ] Add comprehensive unit tests for all modules
+- [ ] Benchmark combined vs separate agents
+- [ ] Add proper configuration management
+- [ ] Implement centralized logging
