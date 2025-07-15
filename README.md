@@ -2,6 +2,12 @@
 
 Agents built for meshai.io to extract employee shift information from unstructured schedule files.
 
+## Prompts
+
+Extract ALL shifts from this schedule. Return ONLY a JSON array with these fields for each shift: Start Date, Start Time, End Date, End Time, Job, Member, Worked Hours, Note. Use null for missing fields. Be concise but complete - extract EVERY shift shown.
+
+Below is a CSV extracted from an Excel file using pandas. Your task is to extract ALL shifts from this CSV schedule data. Return ONLY a JSON array with these fields for each shift: Start Date, Start Time, End Date, End Time, Job, Member, Worked Hours, Note. Use null for missing fields. Be concise but complete - extract EVERY shift shown.
+
 ## Setup
 
 1. Install uv if not already installed:

@@ -1,0 +1,1 @@
+# Excel to PNG conversion using LibreOffice
