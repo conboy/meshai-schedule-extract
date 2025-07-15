@@ -59,6 +59,8 @@ main.py
 config.py
 logging.py
 
+data/
+
 file_conversion/
 ├── doc_to_pdf.py
 ├── doc_to_csv.py (convert tables inside doc to csv)
@@ -71,11 +73,12 @@ agents/
 ├── png_agent.py
 ├── csv_agent.py
 ├── code analysis agent (generates python script to extract data directly from excel file)
-├── post_processing_agent.py (role TBD)
-└── png_csv_agent.py (benchmark against separate agents)
+├── png_csv_agent.py (benchmark against separate agents)
+└── post_processing_agent.py (role TBD)
 
 testing/
-├── validated_json/
+├── input_dataset/
+├── output_dataset/
 └── compare_script.py
 ```
 
