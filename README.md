@@ -70,6 +70,7 @@ agents/
 ├── decision_agent.py
 ├── png_agent.py
 ├── csv_agent.py
+├── code analysis agent (generates python script to extract data directly from excel file)
 ├── post_processing_agent.py (role TBD)
 └── png_csv_agent.py (benchmark against separate agents)
 
